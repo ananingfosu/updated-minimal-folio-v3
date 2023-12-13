@@ -317,3 +317,118 @@ footer {
     }
 }
 
+
+
+
+
+
+
+
+
+/* Default styles for all screen sizes */
+
+/* Styles for screens with a width between 320px and 799px */
+@media only screen and (min-width: 320px) and (max-width: 799px) {
+
+    .grid-divider {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid red;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+
+    .webname {
+        width: unset;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .hero-container {
+        margin-top: 100px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-bottom: 2px solid var(--color-line);  
+    
+        .location-time {
+            display: grid;
+            gap: 4rem;
+    
+            .get-contact {
+                display: unset;
+            }
+        }
+    }
+
+    .hero-picture img {
+        position: relative;
+        top: 10px;
+        width: clamp(32px, 8vw, 60px);
+        border-radius: 50%;
+    }
+
+    .hero-heading {
+        margin-top: 3rem;
+        
+        .static-text span {
+            font-size: clamp(28px, 8vw, 50px);
+        }
+
+        h1 {
+            font-size: clamp(28px, 8vw, 50px);
+        }
+    }
+
+    .empty-space02 {
+        display: none;
+    }
+
+    .grid-table-playground {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        .playground-table ul {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;        
+        }
+        
+        ul.t02, ul.t03 {
+            padding-top: 1rem;
+        }
+        
+    }
+}
+  
+/* Styles for screens with a width between 800px and 1023px */
+@media only screen and (min-width: 800px) and (max-width: 1023px) {
+    /* Add your styles here */
+}
+  
+/* Styles for screens with a width between 1024px and 1439px */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    /* Add your styles here */
+}
+  
+/* Styles for screens with a width between 1440px and 1919px */
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    /* Add your styles here */
+}
+  
+/* Styles for screens with a width of 1920px and larger */
+@media only screen and (min-width: 1920px) {
+    /* Add your styles here */
+}
+  
