@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
-    /*border: 2px dashed red;*/
+    border: 2px dashed red;
 }
 
 html {
@@ -147,18 +147,10 @@ nav {
     border-bottom: 2px solid white;
 }
 
-.dynamic-text {    
-    height: 80px;
-    line-height: 80px;
-    overflow: hidden;
-}
-
-.dynamic-text li {
+.static-text {
     color: var(--color-subtxt);
     font-size: var(--fs-60);
-    position: relative;
-    top: 0;
-    animation: slide 6s steps(2) infinite;
+    line-height: 1;
 }
 
 .hero-picture img {
