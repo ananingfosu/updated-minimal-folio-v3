@@ -3,7 +3,7 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
-    border: 2px dashed red;
+    /*border: 2px dashed red;*/
 }
 
 html {
@@ -46,6 +46,7 @@ html {
 :root {
     --color-bg: #1C1C1C;
     --color-scrollbg: #363636;
+    --color-line: #707070;
     --color-maintxt: #FFFFFF;
     --color-subtxt: #B3B3B3;
 
@@ -144,7 +145,16 @@ nav {
 .hero-container {
     margin-top: 250px;
     padding-bottom: 30px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--color-line);
+
+    .location-time {
+        display: grid;
+        gap: 1rem;
+
+        .get-contact {
+            display: none;
+        }
+    }
 }
 
 .static-text {
@@ -213,7 +223,7 @@ nav {
 
 .about-container, .project-grid {
     padding-top: 4rem;
-    border-top: 2px solid white;
+    border-top: 2px solid var(--color-line);
 }
 
 .about-desc {
@@ -224,7 +234,7 @@ nav {
     }
 }
 
-.social-media ul{
+.social-media ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -239,21 +249,24 @@ nav {
     display: grid;
     grid-template-columns: 30% 70%;
     margin-top: 4rem;
-    border-top: 2px solid white;
+    border-top: 2px solid var(--color-line);
     padding-top: 2rem;
     margin-bottom: 6rem;
     margin-right: 20px;
     
-
-    .playground-table ul{
+    .playground-table ul {
         
         padding: 0 0 2rem 0 ;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid var(--color-line);
 
+        .faded {
+            color: var(--color-subtxt);
+        }
+    
     }
-
+    
     ul.t02, ul.t03 {
         padding-top: 2rem;
     }
@@ -261,13 +274,12 @@ nav {
 }
 
 
-
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     padding-bottom: 5rem;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--color-line);
 }
 
 
@@ -277,14 +289,14 @@ nav {
     grid-template-columns: 24% 50% 26%;
     margin-top: 4rem;
     padding-bottom: 4rem;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--color-line);
 }
 
 .contact-desc h3 {
     color: var(--color-subtxt);
 }
 
-.social-media02 ul{
+.social-media02 ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
@@ -294,8 +306,9 @@ nav {
 footer {
     margin: 1rem 20px;
     
-    p{
+    p {
         color: var(--color-subtxt);
+        padding-bottom: 1rem;
 
         span {
             color: var(--color-maintxt);
