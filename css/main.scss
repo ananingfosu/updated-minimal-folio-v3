@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -44,10 +46,12 @@ html {
     }
 
 :root {
-    --color-bg: #1C1C1C;
-    --color-scrollbg: #363636;
-    --color-maintxt: #FFFFFF;
-    --color-subtxt: #B3B3B3;
+    --scrollbg: #363636;
+    --text: #e2edfa;
+    --background: #06131e;
+    --primary: #88b8e8;
+    --secondary: #6f1b91;
+    --accent: #da3cd9;
 
     --fs-14: 14px;
     --fs-28: 28px;
@@ -65,6 +69,25 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'undefined';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
 img {
     width: 100%;
 }
@@ -81,6 +104,8 @@ a, a::after {
 a:hover {
     color: var(--color-subtxt);
 }
+
+/*
 
 h1 {
     font-size: var(--fs-60);
@@ -304,3 +329,6 @@ footer {
     }
 }
 
+
+
+*/
