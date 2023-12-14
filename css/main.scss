@@ -8,6 +8,21 @@
     border: 2px dashed red;
 }
 
+:root {
+    --scrollbg: #363636;
+    --text: #e2edfa;
+    --background: #06131e;
+    --primary: #88b8e8;
+    --secondary: #6f1b91;
+    --accent: #da3cd9;
+
+    --fs-14: 14px;
+    --fs-28: 28px;
+    --fs-34: 34px;
+    --fs-50: 50px;
+    --fs-60: 60px;
+}
+
 html {
     
     scroll-behavior: smooth;
@@ -45,20 +60,6 @@ html {
       height: 150vh;
     }
 
-:root {
-    --scrollbg: #363636;
-    --text: #e2edfa;
-    --background: #06131e;
-    --primary: #88b8e8;
-    --secondary: #6f1b91;
-    --accent: #da3cd9;
-
-    --fs-14: 14px;
-    --fs-28: 28px;
-    --fs-34: 34px;
-    --fs-50: 50px;
-    --fs-60: 60px;
-}
 
 body {
     font-family: 'Inter', sans-serif;
