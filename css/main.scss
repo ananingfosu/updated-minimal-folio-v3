@@ -5,105 +5,391 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
-    border: 2px dashed red;
 }
 
 :root {
     --scrollbg: #363636;
     --text: #e2edfa;
+    --subtext: #7f8c97;
     --background: #06131e;
     --primary: #88b8e8;
     --secondary: #6f1b91;
     --accent: #da3cd9;
 
     --fs-14: 14px;
-    --fs-28: 28px;
-    --fs-34: 34px;
-    --fs-50: 50px;
-    --fs-60: 60px;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-    /* WebKit Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--color-scrollbg);
-      border-radius: 8px;
-    }
+::-webkit-scrollbar-thumb {
+    background-color: va(--color-scrollbg);
+    border-radius: 8px;
+}
 
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 
     /* Firefox Scrollbar */
-    ::-moz-scrollbar {
-      width: 8px;
-    }
+::-moz-scrollbar {
+    width: 8px;
+}
 
-    ::-moz-scrollbar-thumb {
-      background-color: var(--color-scrollbg);
-    }
+::-moz-scrollbar-thumb {
+    background-color: va(--color-scrollbg);
+}
 
-    ::-moz-scrollbar-track {
-      background-color: transparent;
-    }
-
-    body {
-      /* Add some content to enable scrolling */
-      height: 150vh;
-    }
-
+::-moz-scrollbar-track {
+    background-color: transparent;
+}
 
 body {
+    color: var(--text);
     font-family: 'Inter', sans-serif;
-    color: var(--color-maintxt);
     font-weight: 400;
-    background-color: var(--color-bg);
+    background-color: var(--background);
     font-size: var(--fs-14);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'undefined';
-  font-weight: 700;
+  font-weight: 500;
 }
 
 html {font-size: 100%;} /* 16px */
 
-h1 {font-size: 4.210rem; /* 67.36px */}
+h1 {
+    font-size: 24px;
+    /*font-size: clamp(24px, 8vw, 40px);*/
+}
 
-h2 {font-size: 3.158rem; /* 50.56px */}
-
-h3 {font-size: 2.369rem; /* 37.92px */}
+h2 {font-size: 30px; /* 50.56px */}
 
 h4 {font-size: 1.777rem; /* 28.48px */}
-
-h5 {font-size: 1.333rem; /* 21.28px */}
-
-small {font-size: 0.750rem; /* 12px */}
 
 img {
     width: 100%;
 }
 
 .subtext01 {
-    color: var(--color-subtxt);
+    color: var(--subtext);
 }
 
 a, a::after {
-    color: white;
+    color: var(--text);
     transition: 200ms ease-in-out;
 }
 
 a:hover {
-    color: var(--color-subtxt);
+    color: var(--subtext);
 }
+
+.container, .grid-divider, .contact-container {
+    margin: 0 10px;
+}
+
+.empty-space {
+    border-bottom: 2px solid var(--subtext);
+} 
+
+
+/*#####################################
+Navigation Bar
+#######################################
+*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 20px 10px;
+
+
+    .get-contact {
+        display: none;
+    }
+
+    .nav-links {
+        text-align: right;
+        display: grid;
+        gap: 4px;
+    }
+}
+
+
+
+/*#####################################
+Hero Section
+#######################################
+*/
+
+
+.hero-container {
+    display: grid;
+    gap: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 2px solid var(--subtext);
+}
+
+.hero-prompt {
+    margin-top: 3rem;
+    display: grid;
+    gap: 5rem;
+}
+
+.static-text h1, .subtext02 {
+    color: var(--subtext);
+    background: linear-gradient(to right, #88b8e8, #da3cd9);
+    -webkit-background-clip: text; 
+    color: transparent;
+    display: inline-block;
+}
+
+.hero-picture img {
+    position: relative;
+    top: 10px;
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/*#####################################
+Horizontal Scroll Section
+#######################################
+*/
+.what_i_do {
+    margin: 1.5rem 0;
+}
+
+.scroll-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.horizontal-scrolling-items,
+.horizontal-scrolling-items2 {
+    display: flex;
+    margin: 0.5rem;
+}
+  
+.horizontal-scrolling-items__item {
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+    line-height: 1;
+    white-space: nowrap;
+}
+  
+@keyframes infiniteScroll {
+    from {transform: translateX(0) }
+    to {transform: translateX(calc(0px - 50%));}
+}
+
+.horizontal-scrolling-items {
+    animation-name: infiniteScroll;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+  
+@keyframes infiniteScroll2 {
+    from {transform: translateX(0) }
+    to {transform: translateX(calc(0px - 50%));}
+}
+
+.horizontal-scrolling-items2 {
+    animation-name: infiniteScroll2;
+    animation-duration: 15s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+/*#####################################
+About Section
+#######################################
+*/
+
+.about-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .social-media ul{
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.about-text {
+    margin-bottom: 1.8rem;
+
+    span {
+        color: white;
+    }
+}
+
+.about-desc h4 {
+    margin-bottom: 1.25rem;
+}
+  
+.about-playground {
+    display: grid;
+    padding-bottom: 4rem;
+    border-bottom: 2px solid var(--subtext);
+
+    .grid-table-playground {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
+
+.playground-table {
+    display: grid;
+    gap: 1rem;
+
+    .table {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--subtext);
+
+        p {
+            color: var(--subtext);
+        }
+    }
+}
+
+
+/*#####################################
+Projects Section
+#######################################
+*/ 
+
+.project-grid {
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+    display: grid;
+    gap: 1rem;
+    border-bottom: 2px solid var(--subtext);
+    
+    .project-text {
+        padding-bottom: 1.8rem;
+    }
+}
+
+
+
+/*#####################################
+Reach out
+#######################################
+*/ 
+
+.contact-container {
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+    display: grid;
+    border-bottom: 2px solid var(--subtext);
+
+    .contact-text {
+        padding-bottom: 1.8rem;
+        color: white;
+    }
+
+    .contact-desc {
+        padding-bottom: 2rem;
+    }
+
+    .social-media02 ul {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0.5rem;
+    }
+}
+
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Styles for screens with a width between 320px and 799px */
+
+
+/* ############################################
+################################################
+Default styles for all screen sizes 
+################################################
+################################################
+*/
+
+
+  
+  /* Styles for screens with a width between 800px and 1023px */
+@media only screen and (min-width: 800px) and (max-width: 1023px) {
+
+    .container, .grid-divider, .contact-container {
+        margin: 0 15px;
+    }
+
+    nav {
+        margin: 30px 15px;
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+    }
+
+
+
+    .hero-container {
+        margin-top: 30%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 3rem;
+    }
+
+    .hero-prompt {
+        margin: 0;
+        display: grid;
+        gap: 2rem;
+        border: 2px solid red;
+    }
+
+    .hero-heading {
+        margin-right: 50px;
+        border: 2px solid red;
+    }
+}
+  
+  /* Styles for screens with a width between 1024px and 1439px */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    /* Add your styles here */
+}
+  
+  /* Styles for screens with a width between 1440px and 1919px */
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+    /* Add your styles here */
+}
+  
+  /* Styles for screens with a width of 1920px and larger */
+@media only screen and (min-width: 1920px) {
+    /* Add your styles here */
+}
+  
+
 
 /*
 

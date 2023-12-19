@@ -22,10 +22,10 @@
     <header>
         <nav class="navigation">
             <span class="webname">
-                Ananing Fosu
+                👋 Ananing Fosu
             </span>
 
-            <ul class="nav-contact">
+            <ul class="get-contact">
                 <li class="text-heading01">Get in touch</li>
                 <li class="subtext01">ananingfosu@gmail.com</li>
             </ul>
@@ -48,27 +48,28 @@
     -->
     
     <section class="hero-container grid-divider">
-        <div class="location-time">
-            <li class="text-heading01">Location and time</li>
-            <li class="subtext01">
-                Kumasi, Ghana
-                07:42PM
+        <div class="hero-prompt">
+            <ul class="get-contact">
+                <li class="text-heading01">Get in touch</li>
+                <li class="subtext01">ananingfosu@gmail.com</li>
+            </ul>
+            <ul>
+                <li class="text-heading01">Location and time</li>
+                <li class="subtext01"><p id="time"></p>
+               
             </li>
+            </ul>
         </div>
 
         <div class="hero-heading">
             <div class="static-text">
-                <span>Akwaaba, madanfo!</span>
+                <h1>Akwaaba, madanfo!</h1>
             </div>
             <h1>I am <span class="hero-picture">
                         <img src="images/profile-pic.jpg" alt="Picture of Ananing Fosu">
                     </span>
                 Ananing Fosu</h1>
             <h1>A developer and designer</h1>
-        </div>
-
-        <div class="empty-space">
-
         </div>
     </section>
 
@@ -86,11 +87,11 @@
             <div class="horizontal-scrolling-items">
             
                 <div class="horizontal-scrolling-items__item">
-                WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC DESIGN & BRAND DESIGN & PHOTO MANIPULATION &&nbsp
+                <h2>WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC DESIGN & BRAND DESIGN & PHOTO MANIPULATION &&nbsp</h2>
                 </div>
             
                 <div class="horizontal-scrolling-items__item">
-                WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC DESIGN & BRAND DESIGN & PHOTO MANIPULATION &&nbsp
+                <h2>WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC DESIGN & BRAND DESIGN & PHOTO MANIPULATION &&nbsp</h2>
                 </div>
             
             </div>
@@ -101,17 +102,22 @@
             <div class="horizontal-scrolling-items2">
             
                 <div class="horizontal-scrolling-items__item">
-                DESIGN & BRAND DESIGN & PHOTO MANIPULATION & WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC &&nbsp
+                <h2>DESIGN & BRAND DESIGN & PHOTO MANIPULATION & WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC &&nbsp</h2>
                 </div>
                 
                 <div class="horizontal-scrolling-items__item">
-                DESIGN & BRAND DESIGN & PHOTO MANIPULATION & WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC &&nbsp
+                <h2>DESIGN & BRAND DESIGN & PHOTO MANIPULATION & WEB DEVELOPMENT & WEB DESIGN & UI/UX DESIGN & GRAPHIC &&nbsp</h2>
                 </div>
             
             </div>
             
         </div>
-    </section>    
+    </section>   
+    
+    
+    <div class="grid-divider empty-space">
+
+    </div>
 
 
 
@@ -144,25 +150,26 @@
         </div>
     </section>
 
-    <section class="about-playground">
-        <div class="empty-space02">
+    <section class="container about-playground">
+        <div class="empty-space">
 
         </div>
+
         <div class="grid-table-playground">
             <span class="text-heading01 playground-title">Playground</span>
 
             <div class="playground-table">
                 <ul class="table t01">
                     <li><a href="#">Instagram</a></li>
-                    <li>Photo Manipulations</li>
+                    <li><p>Photo Manipulations</p></li>
                 </ul>
                 <ul class="table t02">
                     <li><a href="#">Behance/Dribbble</a></li>
-                    <li>UIUX Shots and Showcases></li>
+                    <li><p>UIUX Shots and Showcases</p></li>
                 </ul>
                 <ul class="table t03">
                     <li><a href="#">Pinterest</a></li>
-                    <li>Graphic Designs</li>
+                    <li><p>Graphic Designs</p></li>
                 </ul>
             </div>
         </div>
@@ -211,12 +218,12 @@
 
     <section class="contact-container" id="Contact">
         <div class="contact-text">
-            <span class="text-heading01">Get in touch</span>
+            <span class="text-heading01">Reach Out</span>
         </div>
 
         <div class="contact-desc">
             <h4 class="text-heading02">Get in touch</h4>
-            <h3 class="subtext02">ananingfosu@gmail.com</h3>
+            <h1 class="subtext02">ananingfosu@gmail.com</h1>
             <!--
                 <span class="download-resume"><a href="#">Resume/cv</a></span>
             -->
@@ -236,11 +243,40 @@
         </div>
     </section>    
 
-    <footer>
-        <p><span>{ Ananing Fosu }</span> Designed and developed by 
-            <span>Ananing Fosu</span> and inspired by <span>Zury</span>
+    <footer class="container">
+        <p><a href="#">👋 Ananing Fosu</a> Designed and developed by 
+            <a href="#">Ananing Fosu</a> and inspired by <a href="#">Zury</a>
         </p>
     </footer>
+
+
+
+
+
+<script>
+    function updateTime() {
+        // Get the current time in Ghana (Greenwich Mean Time, GMT)
+        const now = new Date();
+        const ghanaTime = new Date(now.toLocaleString("en-US", { timeZone: "Africa/Accra" }));
+
+        // Format the time as HH:mm:ss AM/PM
+        const hours = ghanaTime.getUTCHours();
+        const minutes = ghanaTime.getUTCMinutes();
+        const seconds = ghanaTime.getUTCSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        const formattedHours = (hours % 12) || 12; // Convert 24-hour to 12-hour format
+        const formattedTime = `${formattedHours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} ${ampm}`;
+
+        // Update the HTML element with the current time
+        document.getElementById('time').textContent = `Ghana Time: ${formattedTime}`;
+    }
+
+    // Update the time every second
+    setInterval(updateTime, 1000);
+
+    // Initial call to set the time immediately
+    updateTime();
+</script>
 
 </body>
 </html>
