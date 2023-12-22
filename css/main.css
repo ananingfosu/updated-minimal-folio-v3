@@ -313,9 +313,13 @@ Default styles for all screen sizes
 ################################################
 */
 /* Styles for screens with a width between 800px and 1023px */
-@media only screen and (min-width: 800px) and (max-width: 1023px) {
+@media only screen and (min-width: 800px) {
+  h1 {
+    font-size: 36px;
+  }
   .container, .grid-divider, .contact-container {
-    margin: 0 15px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   nav {
     margin: 30px 15px;
@@ -340,6 +344,12 @@ Default styles for all screen sizes
   .hero-heading {
     margin-right: 50px;
     border: 2px solid red;
+  }
+  .about-desc h4 {
+    width: 80%;
+  }
+  .about-desc p {
+    width: 60%;
   }
 }
 /* Styles for screens with a width between 1024px and 1439px */
