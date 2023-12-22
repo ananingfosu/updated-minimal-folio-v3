@@ -66,11 +66,10 @@ html {
 } /* 16px */
 h1 {
   font-size: 24px;
-  /*font-size: clamp(24px, 8vw, 40px);*/
 }
 
 h2 {
-  font-size: 30px; /* 50.56px */
+  font-size: 30px;
 }
 
 h4 {
@@ -305,16 +304,16 @@ footer {
   text-align: center;
 }
 
-/* Styles for screens with a width between 320px and 799px */
+/* Styles for screens with a width 320px  */
 /* ############################################
 ################################################
-Default styles for all screen sizes 
+Default styles for all other screen sizes 
 ################################################
 ################################################
 */
 /* Styles for screens with a width between 800px and 1023px */
 @media only screen and (min-width: 800px) {
-  h1 {
+  h1, h2 {
     font-size: 36px;
   }
   .container, .grid-divider, .contact-container {
@@ -332,7 +331,7 @@ Default styles for all screen sizes
   .hero-container {
     margin-top: 30%;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 24% 76%;
     gap: 3rem;
   }
   .hero-prompt {
@@ -347,18 +346,74 @@ Default styles for all screen sizes
   }
   .about-desc h4 {
     width: 80%;
+    border: 2px solid red;
   }
   .about-desc p {
     width: 60%;
   }
+  .playground-table .table {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
 }
 /* Styles for screens with a width between 1024px and 1439px */
-@media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  /* Add your styles here */
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 46px;
+  }
+  nav {
+    border: 2px solid red;
+    display: flex;
+  }
+  nav .webname {
+    width: 24%;
+    text-align: left;
+    border: 2px solid rgb(255, 0, 225);
+  }
+  nav .get-contact {
+    display: unset;
+    width: 30%;
+    text-align: left;
+    border: 2px solid green;
+  }
+  nav .nav-links {
+    width: 46%;
+    text-align: right;
+    justify-content: end;
+  }
+  .hero-prompt .get-contact {
+    display: none;
+  }
+  .hero-container {
+    gap: 0;
+  }
+  .hero-picture img {
+    width: 60px;
+  }
+  .grid-divider, .contact-container {
+    display: grid;
+    grid-template-columns: 24% 62% 14%;
+  }
+  .about-container .social-media ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .empty-space, .grid-table-playground {
+    margin-left: 24%;
+  }
 }
 /* Styles for screens with a width between 1440px and 1919px */
 @media only screen and (min-width: 1440px) and (max-width: 1919px) {
   /* Add your styles here */
+  .container, .grid-divider, .contact-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .grid-divider {
+    display: grid;
+    grid-template-columns: 24% 62% 14%;
+  }
 }
 /* Styles for screens with a width of 1920px and larger */
 @media only screen and (min-width: 1920px) {
