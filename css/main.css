@@ -349,7 +349,7 @@ Default styles for all other screen sizes
     border: 2px solid red;
   }
   .about-desc p {
-    width: 60%;
+    width: 70%;
   }
   .playground-table .table {
     display: grid;
@@ -399,8 +399,12 @@ Default styles for all other screen sizes
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
-  .empty-space, .grid-table-playground {
+  .about-playground .empty-space, .grid-table-playground {
     margin-left: 24%;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 /* Styles for screens with a width between 1440px and 1919px */

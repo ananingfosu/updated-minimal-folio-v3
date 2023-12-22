@@ -379,7 +379,7 @@ Default styles for all other screen sizes
     }
 
     .about-desc p {
-        width: 60%;
+        width: 70%;
     }
 
     .playground-table .table {
@@ -444,8 +444,13 @@ Default styles for all other screen sizes
         gap: 1rem;
     }
 
-    .empty-space, .grid-table-playground {
+    .about-playground .empty-space, .grid-table-playground {
         margin-left: 24%;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
   
